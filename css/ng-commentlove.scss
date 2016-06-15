@@ -1,0 +1,25 @@
+#ng-cl-get-posts {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#ng-cl-get-posts {
+    margin-bottom: 5px;
+}
+
+#cl_latest_posts {
+    ul {
+        list-style: none;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    input[type="radio"] {
+        display: inline-block;
+        margin-right: 4px;
+    }
+
+    label {
+        display: inline;
+    }
+}
