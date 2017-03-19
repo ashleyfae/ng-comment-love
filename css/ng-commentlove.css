@@ -15,4 +15,9 @@
 #cl_latest_posts label {
   display: inline; }
 
+.comment-love-error {
+  background: #ffebe8;
+  border: 1px solid #c00;
+  padding: .5em 1em; }
+
 /*# sourceMappingURL=ng-commentlove.css.map */
