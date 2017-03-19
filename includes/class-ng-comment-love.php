@@ -108,7 +108,7 @@ class NG_Comment_Love {
 		// Loop through each item and add it to our array.
 		foreach ( $rss_items as $item ) {
 			$return[] = array(
-				'ID'       => esc_html( sanitize_title_with_dashes( $item->get_title() ) ),
+				'ID'       => esc_attr( sanitize_title_with_dashes( $item->get_title() ) ),
 				'title'    => esc_html( $item->get_title() ),
 				'link'     => esc_url( $item->get_permalink() ),
 				'selected' => ( $i === 0 ) ? 'selected' : ''
@@ -170,12 +170,18 @@ class NG_Comment_Love {
 			return false;
 		}
 
+		$i = 0;
+
 		// Loop through each post and add it to our array.
 		foreach ( $recent_posts as $recent_post ) {
 			$return[] = array(
-				'title' => strip_tags( $recent_post->post_title ),
-				'link'  => get_permalink( $recent_post->ID )
+				'ID'       => esc_attr( $recent_post->post_name ),
+				'title'    => strip_tags( $recent_post->post_title ),
+				'link'     => get_permalink( $recent_post->ID ),
+				'selected' => ( $i === 0 ) ? 'selected' : ''
 			);
+
+			$i ++;
 		}
 
 		return $return;
