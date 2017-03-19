@@ -63,11 +63,12 @@ jQuery(document).ready(function ($) {
          */
         getPosts: function () {
 
+	        clMessageField.empty();
             NG_CommentLove.addSpinner();
 
             // URL is invalid - bail.
             if (NG_CommentLove.checkURL() == false) {
-                clMessageField.empty().append('<p>' + NGLOVE.message_no_url + '</p>');
+                clMessageField.append('<p class="comment-love-error">' + NGLOVE.message_no_url + '</p>');
                 NG_CommentLove.removeSpinner();
 
                 return false;
