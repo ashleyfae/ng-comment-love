@@ -1,9 +1,9 @@
 <?php
-/*
+/**
  * Plugin Name: NG Comment Love
  * Plugin URI: https://www.nosegraze.com
  * Description: Fetches the commenter's most recent post to display below their comment
- * Version: 1.1.2
+ * Version: 1.1.3
  * Author: Nose Graze
  * Author URI: https://www.nosegraze.com
  * License: GPL2
@@ -17,7 +17,7 @@
  * Define constants.
  */
 if ( ! defined( 'NGLOVE_VERSION' ) ) {
-	define( 'NGLOVE_VERSION', '1.1.2' );
+	define( 'NGLOVE_VERSION', '1.1.3' );
 }
 
 if ( ! defined( 'NGLOVE_DIR' ) ) {

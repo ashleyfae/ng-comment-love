@@ -29,7 +29,7 @@ function ng_comment_love_scripts() {
 	/*
 	 * CSS
 	 */
-	wp_enqueue_style( 'ng-comment-love', NGLOVE_URL . '/css/ng-commentlove' . $suffix . '.css', array(), NGLOVE_VERSION );
+	wp_enqueue_style( 'ng-comment-love', NGLOVE_URL . 'css/ng-commentlove' . $suffix . '.css', array(), NGLOVE_VERSION );
 
 	/*
 	 * JavaScript
@@ -42,7 +42,7 @@ function ng_comment_love_scripts() {
 
 	$current_user = wp_get_current_user();
 
-	wp_enqueue_script( 'ng-comment-love', NGLOVE_URL . '/js/commentlove' . $suffix . '.js', $deps, NGLOVE_VERSION, true );
+	wp_enqueue_script( 'ng-comment-love', NGLOVE_URL . 'js/commentlove' . $suffix . '.js', $deps, NGLOVE_VERSION, true );
 	$data = array(
 		'ajaxurl'        => admin_url( 'admin-ajax.php' ),
 		'nonce'          => wp_create_nonce( 'ng_comment_love_ajax_nonce' ),
