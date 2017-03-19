@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
 		addSpinner: function () {
 			$('body').css('cursor', 'progress');
 			getPostsButton.attr('disabled', true);
-			getPostsButton.after('<i id="ng-love-spinner" class="fa fa-spinner fa-spin"></i>');
+			clMessageField.empty().append('<i id="ng-love-spinner" class="fa fa-spinner fa-spin"></i>');
 		},
 
 		/**
