@@ -2,7 +2,7 @@ jQuery.noConflict();
 
 jQuery(document).ready(function ($) {
 
-    $('#ng-remove-love').click(function (e) {
+    $('#comment-love-remove-love').click(function (e) {
         e.preventDefault();
 
         var loveButtonContainer = $(this).parent();

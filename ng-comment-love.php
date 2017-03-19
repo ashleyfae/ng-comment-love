@@ -68,13 +68,13 @@ function ng_comment_love_url_field( $field ) {
 	ob_start();
 	?>
 	<div id="commentlove">
-		<div id="cl_messages"></div>
-		<div id="cl_latest_posts"></div>
+		<div id="comment-love-messages"></div>
+		<div id="comment-love-latest-posts"></div>
 		<input type="hidden" name="cl_post_url" id="cl_post_url">
 	</div>
 	<?php
 	$comment_love = ob_get_clean();
-	$message      = '<span id="comment-love-message"> ' . ng_comment_love_get_option( 'text_comment_form', __( '(Enter your URL then <a href="#" id="ng-cl-get-posts">click here</a> to include a link to one of your blog posts.)', 'ng-comment-love' ) ) . '</span>';
+	$message      = '<span id="comment-love-message"> ' . ng_comment_love_get_option( 'text_comment_form', __( '(Enter your URL then <a href="#" id="comment-love-get-posts">click here</a> to include a link to one of your blog posts.)', 'ng-comment-love' ) ) . '</span>';
 
 	if ( false !== strpos( $field, '</p>' ) ) {
 		$field = str_replace( '</p>', $message . '</p>', $field );
