@@ -8,6 +8,10 @@
 #comment-love-latest-posts label {
   display: inline; }
 
+.ng-comment-love {
+  font-style: italic;
+  margin-bottom: 1.5em; }
+
 .comment-love-error {
   background: #ffebe8;
   border: 1px solid #c00;
