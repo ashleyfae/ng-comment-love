@@ -7,11 +7,11 @@
  * Author: Nose Graze
  * Author URI: https://www.nosegraze.com
  * License: GPL2
- * 
- * @package ng-comment-love
+ *
+ * @package   ng-comment-love
  * @copyright Copyright (c) 2015, Nose Graze Ltd.
- * @license GPL2+
-*/
+ * @license   GPL2+
+ */
 
 /**
  * Define constants.
@@ -52,63 +52,41 @@ if ( is_admin() ) {
 }
 
 /**
- * Adds Comment Love fields to the comment form.
+ * Modify the URL form field to include notice and link.
  *
- * @param int $post_id ID of the current post
+ * @param string $field HTML for the URL field.
  *
- * @deprecated 1.1.2
- *
- * @since      1.0.0
- * @return array
+ * @since 1.2
+ * @return string Modified form field.
  */
-function ng_comment_love_fields( $post_id ) {
-	if ( is_user_logged_in() && ng_comment_love_get_option( 'show_for_logged_in', 'yes' ) == 'no' ) {
-		return;
-	}
-	?>
-	<div id="commentlove">
-		<?php echo wpautop( ng_comment_love_get_option( 'text_comment_form', __( 'Want to include a link to one of your blog posts below your comment? Enter your URL in the website field, then click the button below to get started.', 'ng-comment-love' ) ) ); ?>
-		<button id="ng-cl-get-posts" class="btn button" type="button"><?php echo ng_comment_love_get_option( 'text_button', __( 'Find a Post', 'ng-comment-love' ) ); ?></button>
-		<div id="cl_messages"></div>
-		<div id="cl_latest_posts"></div>
-		<input type="hidden" name="cl_post_url" id="cl_post_url">
-	</div>
-	<?php
-}
+function ng_comment_love_url_field( $field ) {
 
-//add_action( 'comment_form', 'ng_comment_love_fields' );
-
-/**
- * Adds Comment Love fields right before the submit button.
- *
- * @param array $defaults
- *
- * @since 1.1.2
- * @return array
- */
-function ng_comment_love_comment_form_defaults( $defaults ) {
 	if ( is_user_logged_in() && ng_comment_love_get_option( 'show_for_logged_in', 'yes' ) == 'no' ) {
-		return $defaults;
+		return $field;
 	}
 
 	ob_start();
 	?>
 	<div id="commentlove">
-		<?php echo wpautop( ng_comment_love_get_option( 'text_comment_form', __( 'Want to include a link to one of your blog posts below your comment? Enter your URL in the website field, then click the button below to get started.', 'ng-comment-love' ) ) ); ?>
-		<button id="ng-cl-get-posts" class="btn button" type="button"><?php echo ng_comment_love_get_option( 'text_button', __( 'Find a Post', 'ng-comment-love' ) ); ?></button>
 		<div id="cl_messages"></div>
 		<div id="cl_latest_posts"></div>
 		<input type="hidden" name="cl_post_url" id="cl_post_url">
 	</div>
 	<?php
 	$comment_love = ob_get_clean();
+	$message      = '<span id="comment-love-message"> ' . ng_comment_love_get_option( 'text_comment_form', __( '(Enter your URL then <a href="#" id="ng-cl-get-posts">click here</a> to include a link to one of your blog posts.)', 'ng-comment-love' ) ) . '</span>';
 
-	$defaults['submit_field'] = $comment_love . $defaults['submit_field'];
+	if ( false !== strpos( $field, '</p>' ) ) {
+		$field = str_replace( '</p>', $message . '</p>', $field );
+	} else {
+		$field = $field . $message;
+	}
 
-	return $defaults;
+	return $field . $comment_love;
+
 }
 
-add_filter( 'comment_form_defaults', 'ng_comment_love_comment_form_defaults' );
+add_filter( 'comment_form_field_url', 'ng_comment_love_url_field' );
 
 /**
  * Get latest blog posts from a URL - Ajax CB
