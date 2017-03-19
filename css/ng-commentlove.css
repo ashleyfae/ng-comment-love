@@ -13,4 +13,7 @@
   border: 1px solid #c00;
   padding: .5em 1em; }
 
+.comment-love-waiting {
+  cursor: progress; }
+
 /*# sourceMappingURL=ng-commentlove.css.map */

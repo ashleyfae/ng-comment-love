@@ -118,7 +118,7 @@ jQuery(document).ready(function ($) {
 		 * Add Spinner
 		 */
 		addSpinner: function () {
-			$('body').css('cursor', 'progress');
+			$('body').addClass('comment-love-waiting');
 			getPostsButton.attr('disabled', true);
 			clMessageField.empty().append('<i id="ng-love-spinner" class="fa fa-spinner fa-spin"></i>');
 		},
@@ -127,7 +127,7 @@ jQuery(document).ready(function ($) {
 		 * Remove Spinner
 		 */
 		removeSpinner: function () {
-			$('body').css('cursor', 'default');
+			$('body').removeClass('comment-love-waiting');
 			getPostsButton.attr('disabled', false);
 			$('#ng-love-spinner').remove();
 		},
