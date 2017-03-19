@@ -137,7 +137,18 @@ jQuery(document).ready(function ($) {
 		 */
 		populateHiddenField: function () {
 
-			$('input[name="cl_post_title"]').change(function () {
+			var postTitle = $('input[name="cl_post_title"]');
+			var currentURL = '';
+
+			postTitle.each(function () {
+				if ($(this).prop('checked')) {
+					currentURL = $(this).data('url');
+				}
+			});
+
+			$('#cl_post_url').val(currentURL);
+
+			postTitle.change(function () {
 				var url = $(this).data('url');
 				$('#cl_post_url').val(url);
 			});
