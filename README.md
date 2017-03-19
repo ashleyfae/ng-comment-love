@@ -10,6 +10,12 @@ Displays the commenter's most recent blog post beneath their comment.
 
 ## Changelog
 
+**1.2**
+* Tweak: Changed trigger button to more subtle link below the website field.
+* Tweak: Change all HTML IDs and classes to be more consistent.
+* Fix: Remove error messages when the process is successful.
+* New: Add styles for error messages.
+
 **1.1**
 * Re-coded to trigger via a button instead of clicking inside the comment box.
 
