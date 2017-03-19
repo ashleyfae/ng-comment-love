@@ -251,9 +251,9 @@ function ng_comment_love_get_registered_settings() {
 				'text_comment_form'      => array(
 					'id'   => 'text_comment_form',
 					'name' => esc_html__( 'Comment Form Text', 'ng-comment-love' ),
-					'desc' => sprintf( __( 'Text to appear below the comment form. Must contain an anchor tag with the ID %s', 'ng-comment-love' ), '<code>ng-cl-get-posts</code>' ),
+					'desc' => sprintf( __( 'Text to appear below the comment form. Must contain an anchor tag with the ID %s', 'ng-comment-love' ), '<code>comment-love-get-posts</code>' ),
 					'type' => 'textarea',
-					'std'  => __( '(Enter your URL then <a href="#" id="ng-cl-get-posts">click here</a> to include a link to one of your blog posts.)', 'ng-comment-love' )
+					'std'  => __( '(Enter your URL then <a href="#" id="comment-love-get-posts">click here</a> to include a link to one of your blog posts.)', 'ng-comment-love' )
 				),
 				'text_button'            => array(
 					'id'   => 'text_button',

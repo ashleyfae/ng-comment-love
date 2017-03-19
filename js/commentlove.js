@@ -10,12 +10,15 @@ jQuery(document).ready(function ($) {
 		siteURL = $('#url').val()
 	}
 
-	var getPostsButton = $('#ng-cl-get-posts');
-	var clMessageField = $('#cl_messages');
-	var clLatestPosts = $('#cl_latest_posts');
+	var getPostsButton = $('#comment-love-get-posts');
+	var clMessageField = $('#comment-love-messages');
+	var clLatestPosts = $('#comment-love-latest-posts');
 
 	var NG_CommentLove = {
 
+		/**
+		 * Initialize
+		 */
 		init: function () {
 
 			if (siteURL) {
@@ -115,6 +118,7 @@ jQuery(document).ready(function ($) {
 		 * Add Spinner
 		 */
 		addSpinner: function () {
+			$('body').css('cursor', 'progress');
 			getPostsButton.attr('disabled', true);
 			getPostsButton.after('<i id="ng-love-spinner" class="fa fa-spinner fa-spin"></i>');
 		},
@@ -123,6 +127,7 @@ jQuery(document).ready(function ($) {
 		 * Remove Spinner
 		 */
 		removeSpinner: function () {
+			$('body').css('cursor', 'default');
 			getPostsButton.attr('disabled', false);
 			$('#ng-love-spinner').remove();
 		},

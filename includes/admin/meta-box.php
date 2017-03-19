@@ -52,7 +52,7 @@ function ng_comment_love_render_meta_box( $comment ) {
 		<a href="<?php echo esc_url( $post_url ); ?>" target="_blank"><?php echo esc_html( $post_title ); ?></a>
 	</p>
 	<p>
-		<button type="button" id="ng-remove-love" data-comment-id="<?php echo esc_attr( $comment->comment_ID ); ?>" class="button button-secondary"><?php _e( 'Remove Love', 'ng-comment-love' ); ?></button>
+		<button type="button" id="comment-love-remove-love" data-comment-id="<?php echo esc_attr( $comment->comment_ID ); ?>" class="button button-secondary"><?php _e( 'Remove Love', 'ng-comment-love' ); ?></button>
 	</p>
 	<?php
 
