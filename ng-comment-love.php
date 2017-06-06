@@ -89,6 +89,39 @@ function ng_comment_love_url_field( $field ) {
 add_filter( 'comment_form_field_url', 'ng_comment_love_url_field' );
 
 /**
+ * Modify the logged in user message to include notice.
+ *
+ * @param string $message   Message shown to logged in user.
+ * @param array  $commenter An array containing the comment author's username, email, and URL.
+ * @param string $identity  If the commenter is a registered user, the display name, blank otherwise.
+ *
+ * @since 1.2.2
+ * @return string
+ */
+function ng_comment_love_logged_in_field( $message, $commenter, $identity ) {
+
+	if ( ng_comment_love_get_option( 'show_for_logged_in', 'yes' ) == 'no' ) {
+		return $message;
+	}
+
+	ob_start();
+	?>
+	<div id="commentlove">
+		<div id="comment-love-messages"></div>
+		<div id="comment-love-latest-posts"></div>
+		<input type="hidden" name="cl_post_url" id="cl_post_url">
+	</div>
+	<?php
+	$comment_love = ob_get_clean();
+	$message      .= '<p id="comment-love-message"> ' . ng_comment_love_get_option( 'text_comment_form', __( '(Enter your URL then <a href="#" id="comment-love-get-posts">click here</a> to include a link to one of your blog posts.)', 'ng-comment-love' ) ) . '</p>';
+
+	return $message . $comment_love;
+
+}
+
+add_filter( 'comment_form_logged_in', 'ng_comment_love_logged_in_field', 10, 3 );
+
+/**
  * Get latest blog posts from a URL - Ajax CB
  *
  * @since 1.0.0
