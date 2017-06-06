@@ -10,6 +10,9 @@ Displays the commenter's most recent blog post beneath their comment.
 
 ## Changelog
 
+**1.2.2**
+* Fix: Show message to logged in users when enabled.
+
 **1.2**
 * Tweak: Changed trigger button to more subtle link below the website field.
 * Tweak: Change all HTML IDs and classes to be more consistent.
