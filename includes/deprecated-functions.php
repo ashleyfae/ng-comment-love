@@ -108,6 +108,8 @@ function ng_comment_love_render_meta_box($comment)
  */
 function ng_comment_love_get_blog_post()
 {
+    _deprecated_function(__FUNCTION__, '2.0', CommentLove\Api\v1\ListBlogPosts::class);
+
     // Security check.
     check_ajax_referer('ng_comment_love_ajax_nonce', 'nonce');
 
@@ -169,7 +171,7 @@ function ng_comment_love_display($comment_text)
  */
 function ng_remove_love()
 {
-    _deprecated_function(__FUNCTION__, '2.0');
+    _deprecated_function(__FUNCTION__, '2.0', CommentLove\Api\v1\RemoveLove::class);
 
     // Security check.
     check_ajax_referer('ng_delete_comment_love', 'nonce');
