@@ -1,0 +1,17 @@
+{
+  "name": "ashleyfae/ng-comment-love",
+  "description": "Fetches the commenter's most recent post to display below their comment.",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "Ashleyfae\\CommentLove\\": "src/"
+    },
+    "files": [
+      "includes/deprecated-functions.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4"
+  }
+}

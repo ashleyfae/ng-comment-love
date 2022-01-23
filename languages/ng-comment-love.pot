@@ -1,0 +1,209 @@
+# Copyright (C) 2022 Ashley Gibson
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: NG Comment Love 1.2.2\n"
+"Report-Msgid-Bugs-To: https://github.com/nosegraze/ng-comment-love/issues\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-01-23T16:18:39+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: ng-comment-love\n"
+
+#. Plugin Name of the plugin
+msgid "NG Comment Love"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.nosegraze.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Fetches the commenter's most recent post to display below their comment"
+msgstr ""
+
+#. Author of the plugin
+msgid "Ashley Gibson"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:219
+msgid "Link Type"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:220
+msgid "Choosing \"dofollow\" will give the commenters some SEO juice for their links. \"nofollow\" will tell Google not to follow their link, and thus not pass along any SEO juice to the commenter."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:223
+msgid "nofollow"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:224
+msgid "dofollow"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:230
+msgid "Logged In Users"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:231
+msgid "Whether or not logged in users can add love to their comments."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:234
+msgid "Yes"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:235
+msgid "No"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:241
+msgid "Number of Blog Posts"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:242
+msgid "This is the number of blog posts the plugin will fetch from their site. They'll be able to choose one of this many."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:253
+msgid "Comment Form Text"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:254
+msgid "Text to appear below the comment form. Must contain an anchor tag with the ID %s"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:256
+msgid "(Enter your URL then <a href=\"#\" id=\"comment-love-get-posts\">click here</a> to include a link to one of your blog posts.)"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:260
+msgid "Button Text"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:261
+msgid "Text inside the button for fetching a blog post."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:263
+msgid "Find a Post"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:267
+msgid "Recently Posted"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:268
+msgid "Displayed below the comment text after a comment with love is submitted. Use %1$s as a placeholder for the commenter's name and %2$s as a placeholder for the blog post link."
+msgstr ""
+
+#. Translators: %1$s name of the commenter; %2$s link to a post
+#: includes/admin/settings/register-settings.php:270
+#: src/Helpers/LoveAdder.php:72
+msgid "%1$s recently posted: %2$s"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:274
+msgid "Error Text: Website URL"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:275
+msgid "Error message that appears after pressing the button but if no website URL is entered."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:277
+#: src/Helpers/AssetLoader.php:46
+msgid "Please enter your website URL first!"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:281
+msgid "Error Text: No Posts"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:282
+msgid "Error message that appears after pressing the button but if no posts can be found (or if there's an issue communicating with the site)."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:284
+#: includes/deprecated-functions.php:124
+msgid "No posts found"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:351
+msgid "Settings updated."
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:365
+#: includes/admin/settings/register-settings.php:407
+msgid "General"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:366
+#: includes/admin/settings/register-settings.php:410
+msgid "Text"
+msgstr ""
+
+#: includes/admin/settings/register-settings.php:449
+msgid "The callback function used for the %s setting is missing."
+msgstr ""
+
+#: includes/deprecated-functions.php:180
+msgid "Error: You do not have permission to edit this comment."
+msgstr ""
+
+#: includes/deprecated-functions.php:186
+msgid "The comment love has been removed successfully."
+msgstr ""
+
+#: includes/deprecated-functions.php:189
+msgid "An unexpected error occurred. Failed to remove comment love."
+msgstr ""
+
+#: src/Admin/CommentMetabox.php:27
+#: src/Admin/SettingsPage.php:20
+msgid "Comment Love"
+msgstr ""
+
+#: src/Admin/CommentMetabox.php:60
+msgid "Remove Love"
+msgstr ""
+
+#: src/Admin/CommentMetabox.php:67
+#: src/Helpers/AssetLoader.php:50
+msgid "None"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:19
+msgid "NG Comment Love Settings"
+msgstr ""
+
+#: src/Api/v1/RemoveLove.php:51
+msgid "Comment love removed successfully."
+msgstr ""
+
+#: src/Api/v1/RemoveLove.php:55
+msgid "Failed to remove comment love."
+msgstr ""
+
+#: src/Helpers/AssetLoader.php:48
+msgid "Loading posts..."
+msgstr ""
+
+#: src/Helpers/AssetLoader.php:49
+msgid "No posts found."
+msgstr ""
+
+#: src/Helpers/AssetLoader.php:82
+msgid "Failed to remove love."
+msgstr ""
+
+#. Translators: %1$s opening anchor tag; %2$s closing anchor tag
+#: src/Helpers/CommentFields.php:108
+msgid "(Enter your URL then %1$sclick here%2$s to include a link to one of your blog posts.)"
+msgstr ""
