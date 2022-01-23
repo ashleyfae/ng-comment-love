@@ -1,0 +1,19 @@
+# Git
+.gitignore export-ignore
+.gitattributes export-ignore
+.github/ export-ignore
+
+# Composer
+composer.json export-ignore
+
+# Misc.
+README.md export-ignore
+
+# NPM / Mix
+package.json export-ignore
+package-lock.json export-ignore
+webpack.mix.js export-ignore
+mix-manifest.json export-ignore
+
+# Asset source files
+assets/src export-ignore

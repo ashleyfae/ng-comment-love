@@ -1,0 +1,27 @@
+{
+  "name": "ng-comment-love",
+  "version": "2.0.0",
+  "description": "Fetches the commenter's most recent post to display below their comment.",
+  "scripts": {
+    "build": "npm run i18n && mix --production",
+    "dev": "mix watch",
+    "i18n": "wp i18n make-pot . languages/ng-comment-love.pot --domain=ng-comment-love --headers='{\"Report-Msgid-Bugs-To\": \"https://github.com/nosegraze/ng-comment-love/issues\"}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nosegraze/ng-comment-love.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/nosegraze/ng-comment-love/issues"
+  },
+  "homepage": "https://github.com/nosegraze/ng-comment-love#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.39",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0"
+  }
+}

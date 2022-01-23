@@ -2,6 +2,10 @@
 
 Displays the commenter's most recent blog post beneath their comment.
 
+## Requirements
+
+- PHP 7.4+
+
 ## Installation
 
 1. Upload `ng-commentlove` to the `/wp-content/plugins/` directory
